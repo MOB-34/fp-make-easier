@@ -85,6 +85,7 @@ csvP :: CSV
 csvP = toCSV p
 
 test :: Effect Unit
+test = do
   log $ show $ fromCSV csvP == Just p
 -- log $ show $
 --   toCSV
