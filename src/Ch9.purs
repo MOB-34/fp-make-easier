@@ -1,5 +1,6 @@
 module Ch9 where
 
+import Data.Array.NonEmpty (fromFoldable)
 import Data.Generic.Rep (class Generic)
 import Data.Maybe (Maybe(..))
 import Data.Newtype (class Newtype)
