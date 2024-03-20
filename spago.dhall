@@ -13,9 +13,11 @@ to generate this file without the comments in this block.
 { name = "my-project"
 , dependencies =
   [ "arrays"
+  , "bifunctors"
   , "console"
   , "contravariant"
   , "effect"
+  , "either"
   , "foldable-traversable"
   , "integers"
   , "lists"
@@ -26,6 +28,7 @@ to generate this file without the comments in this block.
   , "profunctor"
   , "strings"
   , "tuples"
+  , "unfoldable"
   ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
