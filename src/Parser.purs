@@ -35,7 +35,7 @@ instance functorParser :: Functor (Parser e) where
   map f p = Parser (\s -> map f <$> parse p s)
 
 instance applyParser :: Apply (Parser e) where
-  apply p1 p2 = ap
+  apply = ap
 
 instance applicaiveParser :: Applicative (Parser e) where
   pure x = Parser \s -> pure $ Tuple s x
@@ -44,6 +44,8 @@ instance bindParser :: Bind (Parser e) where
   bind p1 mf = Parser \s -> do
     Tuple s1 x <- parse p1 s
     parse (mf x) s1
+
+instance monadParser :: Monad (Parser e)
 
 parse :: ∀ e a. Parser e a -> ParseFunction e a
 parse (Parser f) = f
