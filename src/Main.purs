@@ -2,7 +2,7 @@ module Main where
 
 import Prelude
 
-import Parser as Test
+import Ch19 as Test
 import Effect (Effect)
 
 main :: Effect Unit
