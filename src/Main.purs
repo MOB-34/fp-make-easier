@@ -2,7 +2,7 @@ module Main where
 
 import Prelude
 
-import Ch as Test
+import ChRead as Test
 import Effect (Effect)
 
 main :: Effect Unit
